@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#header{
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3em;
+  border-bottom: 2px solid var(--black);
+}
+
+#logo-container, #nav{
+  width: 50%;
+}
+
+#nav{
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navItem{
+  padding: 0 10px;
+}
+
+.navItem:hover{
+  cursor: pointer;
+}
