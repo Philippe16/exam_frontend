@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import AdminPage from "./pages/AdminPage";
-import ExternDataPage from "./pages/ExternDataPage";
+import ShowPage from "./pages/ShowPage";
+import SignUpPage from "./pages/SignUpPage";
 import HomePage from "./pages/HomePage";
+import MyShowsPage from "./pages/MyShowsPage"
 import LoginPage from "./pages/LoginPage";
 import UserPage from "./pages/UserPage";
 
@@ -16,11 +17,11 @@ function App() {
             <Routes>
 
             <Route path="/" element={<HomePage />} />
-            <Route path="/userpage" element={<UserPage />} />
-            <Route path="/adminpage" element={<AdminPage />} />
+            <Route path="/myshows" element={<MyShowsPage />} />
+            <Route path="/shows" element={<ShowPage />} />
             <Route path="/homepage" element={<HomePage />} />
-            <Route path="/loginpage" element={<LoginPage />} />
-            <Route path="/externdatapage" element={<ExternDataPage />} />
+            <Route path="/loginpage" element={<HomePage />} />
+            <Route path="/signuppage" element={<SignUpPage />} />
 
             </Routes>
         </BrowserRouter>

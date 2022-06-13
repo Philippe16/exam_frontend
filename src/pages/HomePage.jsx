@@ -5,7 +5,6 @@ import facade from "../js/apiFacade.js";
 
 const HomePage = props => {
   const navigate = useNavigate();
-
   const [error, setError] = useState(null);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -21,12 +20,12 @@ const HomePage = props => {
     facade.login(username, password)
     .then(() => {
      if(localStorage.getItem('jwtToken') !== null){
-       navigate('/logout')
+       navigate('/shows')
      }
       setError(null);
     })
     .catch(err => {
-      setError("Wrong email or password");
+      setError("Wrong password");
     });
    }
   }
@@ -34,12 +33,11 @@ const HomePage = props => {
   const checkInput = () => {
     let containsError = false;
 
-    setNoEmail(null);
     setNoPassword(null);
     setError(null);
     
     
-    //Check for the Email
+  
     if (username.trim() === "") {
         containsError = true;
         setNoUsername('Please enter a Username');
@@ -58,7 +56,10 @@ const HomePage = props => {
       return containsError;
   };
 
-  
+  const handlesumbit = (e) => {
+    facade.login(username, password);
+
+  }
   return (
     <main>
       <form onSubmit={e => handleSubmit(e)} id="login_form">     
@@ -96,7 +97,7 @@ const HomePage = props => {
             )}
 
             <div id="login_button_container">  
-              <button id="login_button">Submit</button>
+              <button id="login_button" type="sumbit">Submit</button>
             </div>    
 
           

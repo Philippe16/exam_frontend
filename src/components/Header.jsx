@@ -18,7 +18,7 @@ const header = props => {
       "linkTxt": "My Shows"
     },
     {
-      "path": "/signup",
+      "path": "/signuppage",
       "linkTxt": "Sign Up"
     },
     {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import facade from "../js/apiFacade";
 
-const AdminPage = props => {
+const adminPage = props => {
   const [dataFromServer, setDataFromServer] = useState(null);
   const [error, setError] = useState(null);
 
@@ -48,4 +48,4 @@ const AdminPage = props => {
   )
 }
 
-export default AdminPage
+export default ShowPage
