@@ -18,6 +18,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/userpage" element={<UserPage />} />
             <Route path="/adminpage" element={<AdminPage />} />
+            <Route path="/homepage" element={<HomePage />} />
             <Route path="/loginpage" element={<LoginPage />} />
             <Route path="/externdatapage" element={<ExternDataPage />} />
 

@@ -1,10 +1,90 @@
 @charset "UTF-8";
 /* CSS Document */
 
-main{
-  padding: 10px;
+.logo_container{
+  width: 30%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
-.page-title{
+#login_form{
+width: 400px;
+margin: 0 auto;
+margin-top: 50px;
+border-radius: 15px;
+padding: 5px 2px 2px;
+}
+
+#title{
+  text-align: center;
+  
+}
+
+.formContent{
+  border-radius: 15px;
+  margin-top: 10px;
+  padding: 5px 3px;
+}
+
+.login_label{
+display: block;
+margin: 5px 20px 10px;
+text-align: left;
+font-size: 1.1em;
+}
+
+.login_input_container{
+margin: 20px;
+text-align: center;
+}
+
+.login_input{
+  
+  width: 90%;
+  border-radius: 15px;
+  height: 35px;
   padding: 10px;
+  color: blue;
+  font-size: 1em;
+  
+}
+
+#login_button_container{
+  text-align: center;
+  margin-top: 50px;
+  
+}
+
+#login_button{
+  color: lawngreen;
+  background-color: blue;
+  border: 2px solid lightcyan;
+  width: 120px;
+  border-radius: 15px; 
+  font-size: 1.1em;
+  padding: 8px 10px;
+}
+
+#createLink_container{
+  margin-top: 50px;
+  text-align: right;
+  padding: 15px;
+}
+
+#createLink_link{
+  text-decoration: underline;
+}
+
+.error_container{
+  width: 100%;
+  margin: 10px auto;
+  padding: 0 20px;
+  color: red;
+  text-align: left;
+}
+
+
+#error_message{
+  width: 90%;
 }

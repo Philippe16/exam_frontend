@@ -8,29 +8,30 @@ import Nav from "./Nav";
 
 const header = props => {
   const navItems = [
+  
+    {
+      "path": "/shows",
+      "linkTxt": "Shows"
+    },
+    {
+      "path": "/myshows",
+      "linkTxt": "My Shows"
+    },
+    {
+      "path": "/signup",
+      "linkTxt": "Sign Up"
+    },
     {
       "path": "/loginpage",
       "linkTxt": "Login/Logout"
     },
-    {
-      "path": "/userpage",
-      "linkTxt": "UserPage"
-    },
-    {
-      "path": "/adminpage",
-      "linkTxt": "AdminPage"
-    },
-    {
-      "path": "/externdatapage",
-      "linkTxt": "ExternDataPage"
-    }
   ];
 
   return (
     <header id="header" className="flexRow">
       <div id="logo-container">
         <Link to="/">
-          Logo
+          Movie Festival
         </Link>
       </div>
 
