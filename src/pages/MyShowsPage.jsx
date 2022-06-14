@@ -3,29 +3,26 @@ import facade from "../js/apiFacade";
 
 const ShowPage = props => {
   const [dataFromServer, setDataFromServer] = useState(null);
-  const getAllAssignedShows = () => {
-    fetch("http://localhost:8080/devops_starter_war_exploded/api/MovieFestival/AssignedShows" + localStorage.getItem("username"))
-    .then((response) => {
-      return response.json();
+  useEffect( () => {
+    fetch("http://localhost:8080/devops_starter_war_exploded/api/moviefestival/assignedshows/" + localStorage.getItem("username"))
+    .then(res => {
+      return res.json();
     })
-    .then((data) => {
+    .then(data => {
       setDataFromServer(data);
-
+      console.log(data);
+    })
+  },[]);
   
-    }); // fetch END
-  }
 
   return (
     <main>
       <h1>All my shows</h1>
 
-      {dataFromServer && (
-        <div>
-         { dataFromServer.map((index, show) => {
-                return(<p key={ index } > {show.showID } </p>)
-              })}
-        </div>
-      )}
+      {dataFromServer && dataFromServer.map((show, index) => (
+         <p className="myMovies" key = {index} > {show.name}</p>
+      ))}
+
     </main>
   )
 }
